@@ -1,0 +1,1182 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#07006c",
+              "on-secondary-fixed-variant": "#004c69",
+              "surface-dim": "#0f131d",
+              "primary-container": "#8083ff",
+              "surface-bright": "#353944",
+              "inverse-surface": "#dfe2f1",
+              "outline-variant": "#464554",
+              "secondary-fixed-dim": "#7bd0ff",
+              error: "#ffb4ab",
+              tertiary: "#ddb7ff",
+              "surface-container-highest": "#313540",
+              "tertiary-fixed": "#f0dbff",
+              "surface-container-high": "#262a35",
+              outline: "#908fa0",
+              "on-primary": "#1000a9",
+              "surface-container-lowest": "#0a0e18",
+              "on-tertiary-fixed-variant": "#6900b3",
+              secondary: "#7bd0ff",
+              "on-error": "#690005",
+              "secondary-container": "#00a6e0",
+              "on-primary-fixed-variant": "#2f2ebe",
+              "primary-fixed-dim": "#c0c1ff",
+              "tertiary-container": "#b76dff",
+              surface: "#0f131d",
+              "surface-tint": "#c0c1ff",
+              "inverse-primary": "#494bd6",
+              background: "#0f131d",
+              "error-container": "#93000a",
+              "on-surface-variant": "#c7c4d7",
+              "surface-container": "#1c1f2a",
+              "surface-variant": "#313540",
+              "on-secondary-container": "#00374d",
+              "on-secondary": "#00354a",
+              "tertiary-fixed-dim": "#ddb7ff",
+              "on-tertiary": "#490080",
+              "on-secondary-fixed": "#001e2c",
+              "on-primary-container": "#0d0096",
+              primary: "#c0c1ff",
+              "primary-fixed": "#e1e0ff",
+              "on-tertiary-fixed": "#2c0051",
+              "on-tertiary-container": "#400071",
+              "on-background": "#dfe2f1",
+              "on-surface": "#dfe2f1",
+              "surface-container-low": "#171b26",
+              "secondary-fixed": "#c4e7ff",
+              "inverse-on-surface": "#2c303b",
+              "on-error-container": "#ffdad6",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-sm": "0.5rem",
+              gutter: "1.5rem",
+              margin: "1.25rem",
+              "margin-desktop": "4rem",
+              "space-lg": "1.5rem",
+              "space-xl": "2.5rem",
+              "gutter-desktop": "2rem",
+              "space-xs": "0.25rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              display: ["Inter"],
+              "body-lg": ["Inter"],
+              "body-md": ["Inter"],
+              "label-sm": ["JetBrains Mono"],
+              "label-md": ["JetBrains Mono"],
+              "code-inline": ["JetBrains Mono"],
+              "headline-md": ["Inter"],
+              "headline-sm": ["Inter"],
+              "body-sm": ["Inter"],
+              "headline-lg-mobile": ["Inter"],
+              "headline-lg": ["Inter"],
+              "display-mobile": ["Inter"],
+            },
+            fontSize: {
+              display: [
+                "3.5rem",
+                {
+                  lineHeight: "4rem",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": [
+                "1.125rem",
+                { lineHeight: "1.75rem", fontWeight: "400" },
+              ],
+              "body-md": [
+                "0.9375rem",
+                { lineHeight: "1.5rem", fontWeight: "400" },
+              ],
+              "label-sm": [
+                "0.6875rem",
+                {
+                  lineHeight: "1rem",
+                  letterSpacing: "0.04em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-md": [
+                "0.8125rem",
+                {
+                  lineHeight: "1.25rem",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "code-inline": [
+                "0.875rem",
+                { lineHeight: "1.25rem", fontWeight: "500" },
+              ],
+              "headline-md": [
+                "1.5rem",
+                {
+                  lineHeight: "2rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-sm": [
+                "1.125rem",
+                {
+                  lineHeight: "1.5rem",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "0.8125rem",
+                { lineHeight: "1.25rem", fontWeight: "400" },
+              ],
+              "headline-lg-mobile": [
+                "1.75rem",
+                {
+                  lineHeight: "2.25rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "2.25rem",
+                {
+                  lineHeight: "2.75rem",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-mobile": [
+                "2.25rem",
+                {
+                  lineHeight: "2.75rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <header
+      class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"
+    >
+      <div
+        class="h-16 max-w-[1280px] mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"
+      >
+        <a
+          class="flex items-center gap-space-sm group"
+          data-path="overview"
+          href="#"
+          ><div
+            class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-label-md text-label-md font-semibold transition-colors duration-200 group-hover:bg-primary group-hover:text-on-primary"
+          >
+            JP
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none group-hover:text-primary transition-colors"
+              >June Russell N. Patris</span
+            ><span
+              class="font-label-sm text-label-sm text-outline mt-0.5 tracking-wide uppercase"
+              >Software Engineer</span
+            >
+          </div></a
+        >
+        <nav
+          class="hidden md:flex items-center gap-gutter"
+          data-active-classes="text-primary font-semibold"
+        >
+          <a
+            aria-current="page"
+            class="transition-colors duration-150 text-primary font-semibold"
+            data-path="overview"
+            href="#"
+            >Overview</a
+          ><a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+            data-path="about"
+            href="#"
+            >About</a
+          ><a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+            data-path="skills"
+            href="#"
+            >Skills</a
+          ><a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+            data-path="education"
+            href="#"
+            >Education</a
+          ><a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-md">
+          <a
+            class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors duration-200 shadow-sm"
+            data-path="contact"
+            href="#"
+            >Get in Touch</a
+          >
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-surface">
+      <div class="flex flex-col w-full text-on-surface">
+        <!-- Subtle Ambient Glow -->
+        <div
+          class="relative w-full max-w-[1280px] mx-auto px-margin lg:px-margin-desktop overflow-hidden"
+        >
+          <div
+            class="absolute top-12 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-primary-container/10 rounded-full blur-[140px] pointer-events-none -z-10"
+          ></div>
+          <div
+            class="absolute top-48 right-12 w-[380px] h-[280px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none -z-10"
+          ></div>
+          <!-- 1. HERO SECTION -->
+          <section
+            class="pt-space-xl pb-space-xl lg:pt-20 lg:pb-28"
+            id="overview"
+          >
+            <div class="flex flex-col items-start max-w-4xl">
+              <!-- Status Pill -->
+              <div
+                class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high shadow-sm mb-space-lg"
+              >
+                <span class="relative flex h-2 w-2">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-2 w-2 bg-secondary"
+                  ></span>
+                </span>
+                <span
+                  class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold"
+                  >BSIT-4D • Systems Analyst &amp; Developer</span
+                >
+              </div>
+              <!-- Main Heading -->
+              <h1
+                class="font-display text-headline-lg lg:text-display text-on-surface tracking-tight leading-tight"
+              >
+                June Russell N. Patris
+              </h1>
+              <!-- Subtitle / Tagline -->
+              <p
+                class="font-headline-sm text-headline-sm text-primary mt-space-sm font-medium leading-relaxed max-w-3xl"
+              >
+                4th-Year IT Student at Davao del Norte State College • Focused
+                on Database Schema Architecture, Backend Systems, and Mobile
+                Engineering
+              </p>
+              <!-- Concise introductory line -->
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant mt-space-md max-w-2xl leading-relaxed"
+              >
+                Crafting clean database schemas and seamless mobile experiences
+                with PHP/Laravel and React Native.
+              </p>
+              <!-- Actions -->
+              <div class="flex flex-wrap items-center gap-space-md mt-space-xl">
+                <a
+                  class="inline-flex items-center justify-center gap-space-sm px-6 py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all duration-200 shadow-md group"
+                  href="#contact"
+                >
+                  <span
+                    class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform"
+                    >mail</span
+                  >
+                  <span>Contact Me</span>
+                </a>
+                <a
+                  class="inline-flex items-center justify-center gap-space-sm px-6 py-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-200 shadow-sm"
+                  href="#skills"
+                >
+                  <span
+                    class="material-symbols-outlined text-[18px] text-secondary"
+                    >terminal</span
+                  >
+                  <span>View Skills &amp; Background</span>
+                </a>
+              </div>
+              <!-- Quick Info / Metric Badges Bento -->
+              <div
+                class="w-full grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xl pt-space-md"
+              >
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between"
+                >
+                  <span
+                    class="font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                    >Institution</span
+                  >
+                  <div class="mt-2 flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[20px]"
+                      >school</span
+                    >
+                    <span
+                      class="font-headline-sm text-body-md font-semibold text-on-surface"
+                      >Davao del Norte State College</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between"
+                >
+                  <span
+                    class="font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                    >Academic Program</span
+                  >
+                  <div class="mt-2 flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-primary text-[20px]"
+                      >badge</span
+                    >
+                    <span
+                      class="font-headline-sm text-body-md font-semibold text-on-surface"
+                      >BS in Information Technology (BSIT-4D)</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between"
+                >
+                  <span
+                    class="font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                    >Core Tech Stack</span
+                  >
+                  <div class="mt-2 flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-highest font-code-inline text-label-sm text-secondary"
+                      >PHP</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-highest font-code-inline text-label-sm text-secondary"
+                      >Laravel</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-highest font-code-inline text-label-sm text-secondary"
+                      >React Native</span
+                    >
+                    <span
+                      class="px-2 py-0.5 rounded bg-surface-container-highest font-code-inline text-label-sm text-secondary"
+                      >SQL</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 2. PROFILE / ABOUT ME SECTION -->
+          <section class="py-space-xl scroll-mt-20" id="about">
+            <div class="flex items-center gap-space-sm mb-space-sm">
+              <span
+                class="font-code-inline text-label-sm text-primary tracking-widest uppercase"
+                >// 01. PROFILE</span
+              >
+              <div
+                class="h-[1px] flex-1 bg-surface-container-highest max-w-xs"
+              ></div>
+            </div>
+            <h2
+              class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-lg"
+            >
+              About Me
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+              <!-- Main Bio Card -->
+              <div
+                class="lg:col-span-7 p-space-lg lg:p-space-xl rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="inline-flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container-high mb-space-md"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[16px]"
+                      >verified</span
+                    >
+                    <span
+                      class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                      >4th-Year Student (BSIT-4D) • Davao del Norte State
+                      College</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                  >
+                    June Russell N. Patris is a builder, experience earner, and
+                    systems analyst currently in his 4th year (BSIT-4D) at Davao
+                    del Norte State College. He is focused on crafting clean
+                    database schemas and seamless mobile designs using
+                    PHP/Laravel and React Native.
+                  </p>
+                  <p
+                    class="font-body-md text-body-md text-outline mt-space-md leading-relaxed"
+                  >
+                    Emphasizing structural precision and system maintainability,
+                    June analyzes data workflows, normalizes schemas, and
+                    integrates cohesive application interfaces ready for
+                    production-level demands.
+                  </p>
+                </div>
+                <!-- Academic Status Callout -->
+                <div
+                  class="mt-space-lg pt-space-md flex items-center justify-between bg-surface-container rounded-lg p-space-md"
+                >
+                  <div class="flex items-center gap-space-sm">
+                    <span
+                      class="material-symbols-outlined text-primary text-[24px]"
+                      >account_balance</span
+                    >
+                    <div>
+                      <div
+                        class="font-label-md text-label-md text-on-surface font-semibold"
+                      >
+                        Active Enrollment
+                      </div>
+                      <div class="font-body-sm text-body-sm text-outline">
+                        Davao del Norte State College • Department of
+                        Information Technology
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    class="px-space-sm py-1 rounded font-label-sm text-label-sm bg-primary/10 text-primary uppercase font-semibold"
+                    >BSIT-4D</span
+                  >
+                </div>
+              </div>
+              <!-- 3 Core Pillars -->
+              <div class="lg:col-span-5 flex flex-col gap-space-md">
+                <div
+                  class="p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-colors duration-200"
+                >
+                  <div class="flex items-center gap-space-sm mb-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >account_tree</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface"
+                    >
+                      Systems Analysis
+                    </h3>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Architecting scalable workflows, defining clear
+                    requirements, and ensuring rigorous data integrity from
+                    blueprint to execution.
+                  </p>
+                </div>
+                <div
+                  class="p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-colors duration-200"
+                >
+                  <div class="flex items-center gap-space-sm mb-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >database</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface"
+                    >
+                      Database Schema Development
+                    </h3>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Normalized relational modeling, performant indexing
+                    strategies, and maintainable entity relationship patterns
+                    for high concurrency.
+                  </p>
+                </div>
+                <div
+                  class="p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-colors duration-200"
+                >
+                  <div class="flex items-center gap-space-sm mb-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary"
+                    >
+                      <span class="material-symbols-outlined text-[18px]"
+                        >devices</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface"
+                    >
+                      Mobile &amp; Web Engineering
+                    </h3>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Modern reactive mobile interfaces built with React Native
+                    accompanied by robust, secure Laravel RESTful backends.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 3. TECHNICAL SKILLS SECTION -->
+          <section class="py-space-xl scroll-mt-20" id="skills">
+            <div class="flex items-center gap-space-sm mb-space-sm">
+              <span
+                class="font-code-inline text-label-sm text-primary tracking-widest uppercase"
+                >// 02. COMPETENCIES</span
+              >
+              <div
+                class="h-[1px] flex-1 bg-surface-container-highest max-w-xs"
+              ></div>
+            </div>
+            <h2
+              class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-2"
+            >
+              Technical Skills
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant mb-space-lg max-w-2xl"
+            >
+              A grounded toolkit focused on system architecture, relational
+              persistence, and cross-platform client applications.
+            </p>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md"
+            >
+              <!-- Skill 1: PHP -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >code</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                      >Backend</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors"
+                  >
+                    PHP
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed"
+                  >
+                    Server-side web scripting and application architecture for
+                    structured enterprise execution.
+                  </p>
+                </div>
+                <div class="mt-space-md pt-space-sm flex items-center gap-2">
+                  <span class="font-code-inline text-label-sm text-outline"
+                    >&gt; Core Server Logic</span
+                  >
+                </div>
+              </div>
+              <!-- Skill 2: Laravel -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >dns</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                      >Backend</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors"
+                  >
+                    Laravel
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed"
+                  >
+                    Modern MVC framework, Eloquent ORM, RESTful API design, and
+                    authentication patterns.
+                  </p>
+                </div>
+                <div class="mt-space-md pt-space-sm flex items-center gap-2">
+                  <span class="font-code-inline text-label-sm text-outline"
+                    >&gt; RESTful APIs &amp; MVC</span
+                  >
+                </div>
+              </div>
+              <!-- Skill 3: React Native -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >smartphone</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                      >Mobile</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors"
+                  >
+                    React Native
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed"
+                  >
+                    Cross-platform mobile application development with reactive
+                    state management and native bridge integration.
+                  </p>
+                </div>
+                <div class="mt-space-md pt-space-sm flex items-center gap-2">
+                  <span class="font-code-inline text-label-sm text-outline"
+                    >&gt; iOS &amp; Android Apps</span
+                  >
+                </div>
+              </div>
+              <!-- Skill 4: Database Design -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >table_chart</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                      >Data</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors"
+                  >
+                    Database Design
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed"
+                  >
+                    Relational modeling, entity relationships, normal form
+                    adherence, and transaction isolation.
+                  </p>
+                </div>
+                <div class="mt-space-md pt-space-sm flex items-center gap-2">
+                  <span class="font-code-inline text-label-sm text-outline"
+                    >&gt; Normalization (1NF-3NF)</span
+                  >
+                </div>
+              </div>
+              <!-- Skill 5: Database Schema Development -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >schema</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                      >Data</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors"
+                  >
+                    Database Schema Development
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed"
+                  >
+                    DDL generation, migration script engineering, index
+                    optimization, and schema constraints.
+                  </p>
+                </div>
+                <div class="mt-space-md pt-space-sm flex items-center gap-2">
+                  <span class="font-code-inline text-label-sm text-outline"
+                    >&gt; DDL &amp; Performance Indexes</span
+                  >
+                </div>
+              </div>
+              <!-- Skill 6: Mobile UI/UX Design -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-space-md">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >touch_app</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                      >Design</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors"
+                  >
+                    Mobile UI/UX Design
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed"
+                  >
+                    Intuitive mobile prototyping, ergonomic navigation flows,
+                    and user-centric platform patterns.
+                  </p>
+                </div>
+                <div class="mt-space-md pt-space-sm flex items-center gap-2">
+                  <span class="font-code-inline text-label-sm text-outline"
+                    >&gt; Ergonomic Interface Flows</span
+                  >
+                </div>
+              </div>
+              <!-- Skill 7: Systems Analysis (Spanning) -->
+              <div
+                class="group p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:bg-surface-container transition-all duration-200 flex flex-col justify-between md:col-span-2 lg:col-span-3"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+                >
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >insights</span
+                      >
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <h3
+                          class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors"
+                        >
+                          Systems Analysis
+                        </h3>
+                        <span
+                          class="font-code-inline text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-secondary"
+                          >Systems</span
+                        >
+                      </div>
+                      <p
+                        class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed"
+                      >
+                        Requirements engineering, data flow analysis (DFDs),
+                        process modeling, and functional specifications to
+                        bridge user objectives with clean architectural
+                        delivery.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="shrink-0 flex items-center gap-2">
+                    <span
+                      class="font-code-inline text-label-sm text-secondary font-semibold bg-surface-container px-3 py-1.5 rounded"
+                      >Core Specialization</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 4. EDUCATION SECTION -->
+          <section class="py-space-xl scroll-mt-20" id="education">
+            <div class="flex items-center gap-space-sm mb-space-sm">
+              <span
+                class="font-code-inline text-label-sm text-primary tracking-widest uppercase"
+                >// 03. ACADEMIC BACKGROUND</span
+              >
+              <div
+                class="h-[1px] flex-1 bg-surface-container-highest max-w-xs"
+              ></div>
+            </div>
+            <h2
+              class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-lg"
+            >
+              Education
+            </h2>
+            <div
+              class="p-space-lg lg:p-space-xl rounded-xl bg-surface-container-low shadow-sm"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+                <!-- Left Institution Column -->
+                <div class="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-space-sm mb-2">
+                      <span
+                        class="font-code-inline text-label-sm px-2.5 py-1 rounded bg-primary/10 text-primary font-semibold"
+                        >Active 4th-Year Undergraduate</span
+                      >
+                      <span
+                        class="font-code-inline text-label-sm px-2.5 py-1 rounded bg-surface-container-high text-outline"
+                        >Class BSIT-4D</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-md text-headline-md text-on-surface mt-space-sm"
+                    >
+                      Bachelor of Science in Information Technology
+                    </h3>
+                    <div
+                      class="text-secondary font-headline-sm text-headline-sm mt-1"
+                    >
+                      Davao del Norte State College
+                    </div>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant mt-space-md leading-relaxed"
+                    >
+                      Comprehensive training encompassing systems analysis,
+                      computational logic, software engineering paradigms, and
+                      modern multi-tier application architectures.
+                    </p>
+                  </div>
+                  <!-- Core Focus Area Badge -->
+                  <div
+                    class="mt-space-lg p-space-md rounded-lg bg-surface-container flex flex-col gap-1"
+                  >
+                    <span
+                      class="font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                      >Primary Academic Focus</span
+                    >
+                    <span
+                      class="font-body-md text-body-md text-on-surface font-medium"
+                      >Systems Analysis, Database Engineering &amp; Mobile
+                      Development</span
+                    >
+                  </div>
+                </div>
+                <!-- Right Academic Pathway Column -->
+                <div
+                  class="lg:col-span-5 flex flex-col justify-center bg-surface-container rounded-xl p-space-lg"
+                >
+                  <h4
+                    class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-space-md flex items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >timeline</span
+                    >
+                    Academic Progress Pathway
+                  </h4>
+                  <div
+                    class="space-y-space-md relative pl-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container-highest"
+                  >
+                    <div class="relative">
+                      <span
+                        class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary"
+                      ></span>
+                      <div
+                        class="font-label-md text-label-md text-on-surface font-semibold"
+                      >
+                        4th Year (BSIT-4D)
+                      </div>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant"
+                      >
+                        Systems implementation, final thesis architecture,
+                        advanced schema optimization.
+                      </p>
+                    </div>
+                    <div class="relative">
+                      <span
+                        class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary"
+                      ></span>
+                      <div
+                        class="font-label-md text-label-md text-on-surface font-semibold"
+                      >
+                        Database Systems &amp; Mobile Specialization
+                      </div>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant"
+                      >
+                        Relational modeling with SQL, Laravel backend workflows,
+                        and React Native client development.
+                      </p>
+                    </div>
+                    <div class="relative">
+                      <span
+                        class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline"
+                      ></span>
+                      <div
+                        class="font-label-md text-label-md text-on-surface font-semibold"
+                      >
+                        Foundation in IT Fundamentals
+                      </div>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant"
+                      >
+                        Core programming paradigms, algorithms, network
+                        architecture, and discrete logic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 5. CONTACT INFORMATION SECTION -->
+          <section class="py-space-xl scroll-mt-20" id="contact">
+            <div class="flex items-center gap-space-sm mb-space-sm">
+              <span
+                class="font-code-inline text-label-sm text-primary tracking-widest uppercase"
+                >// 04. GET IN TOUCH</span
+              >
+              <div
+                class="h-[1px] flex-1 bg-surface-container-highest max-w-xs"
+              ></div>
+            </div>
+            <h2
+              class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-2"
+            >
+              Contact
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant mb-space-lg max-w-xl"
+            >
+              Available for collaboration, systems consultation, and software
+              engineering opportunities.
+            </p>
+            <div
+              class="p-space-lg lg:p-space-xl rounded-xl bg-surface-container-low shadow-sm"
+            >
+              <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center"
+              >
+                <div class="lg:col-span-7">
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface mb-2"
+                  >
+                    Direct Inquiry
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Reach out directly for discussions on systems analysis,
+                    database design tasks, or mobile project developments.
+                  </p>
+                  <!-- Direct Clickable Email Card with Copy Feature -->
+                  <div
+                    class="mt-space-md p-space-md rounded-lg bg-surface-container flex flex-wrap items-center justify-between gap-space-md"
+                  >
+                    <a
+                      class="flex items-center gap-3 text-secondary hover:text-secondary-fixed transition-colors"
+                      href="mailto:junerussellpatris@gmail.com"
+                    >
+                      <span class="material-symbols-outlined text-[24px]"
+                        >mail</span
+                      >
+                      <span class="font-code-inline text-body-md font-medium"
+                        >junerussellpatris@gmail.com</span
+                      >
+                    </a>
+                    <button
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors cursor-pointer"
+                      onclick="navigator.clipboard.writeText('junerussellpatris@gmail.com'); const btn = this; const orig = btn.innerText; btn.innerText='Copied!'; setTimeout(() =&gt; btn.innerText=orig, 2000);"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >content_copy</span
+                      >
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <!-- Academic Context Note -->
+                  <div class="mt-space-md flex items-center gap-2 text-outline">
+                    <span class="material-symbols-outlined text-[18px]"
+                      >location_on</span
+                    >
+                    <span class="font-body-sm text-body-sm"
+                      >Davao del Norte State College student • Open to
+                      collaborative IT projects &amp; development work.</span
+                    >
+                  </div>
+                </div>
+                <!-- Prominent CTA Action Column -->
+                <div
+                  class="lg:col-span-5 flex flex-col justify-center items-start lg:items-end"
+                >
+                  <a
+                    class="w-full lg:w-auto inline-flex items-center justify-center gap-space-sm px-8 py-4 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all duration-200 shadow-md"
+                    href="mailto:junerussellpatris@gmail.com"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >send</span
+                    >
+                    <span>Send an Email</span>
+                  </a>
+                  <span
+                    class="font-label-sm text-label-sm text-outline mt-2 self-start lg:self-end"
+                    >Response via personal mailbox</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 6. FOOTER SUBSECTION -->
+          <div
+            class="mt-space-xl pt-space-lg pb-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left bg-surface-container-low px-space-lg rounded-lg mb-space-md"
+          >
+            <div>
+              <span
+                class="font-headline-sm text-body-md font-semibold text-on-surface"
+                >© 2026 June Russell N. Patris</span
+              >
+              <p class="font-body-sm text-body-sm text-outline">
+                Bachelor of Science in Information Technology • Davao del Norte
+                State College
+              </p>
+            </div>
+            <div class="font-code-inline text-label-sm text-primary">
+              BSIT-4D • Systems &amp; Engineering
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest mt-space-xl py-space-xl">
+      <div
+        class="max-w-[1280px] mx-auto px-margin lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"
+      >
+        <div class="flex flex-col items-center md:items-start">
+          <span class="font-headline-sm text-headline-sm text-on-surface"
+            >June Russell N. Patris</span
+          >
+          <p class="font-body-sm text-body-sm text-outline mt-space-xs">
+            Systems Analyst &amp; Software Engineer • Engineered for scalability
+            &amp; analytical precision
+          </p>
+        </div>
+        <div class="flex items-center gap-gutter">
+          <a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+            data-path="about"
+            href="#"
+            >About</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+            data-path="skills"
+            href="#"
+            >Skills</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+            data-path="education"
+            href="#"
+            >Education</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <div class="font-label-sm text-label-sm text-outline">
+          © 2025 June Russell N. Patris. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
